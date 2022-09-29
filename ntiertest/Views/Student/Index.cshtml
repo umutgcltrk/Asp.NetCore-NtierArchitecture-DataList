@@ -1,0 +1,23 @@
+﻿@using EntityLayer.Concrete
+@model List<Student>
+    <h3 class="display-4">Öğrenciler Listesi</h3>
+
+    <table class="table">
+        <tr>
+            <th scope="col">Öğreci ID</th>
+            <th scope="col">Öğreci Adı</th>
+            <th scope="col">Öğreci No'su</th>
+            <th scope="col">Öğreci Sınıfı</th>
+        </tr>
+        @foreach(var item in Model){
+        <tr>
+            <td scope="row">@item.StudentID</td>
+            <td>@item.StudentName</td>
+            <td>@item.StudentNo</td>
+            <td>@item.StudentClass</td>
+            
+        </tr>
+        
+            }
+            
+    </table>
